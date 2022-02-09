@@ -55,11 +55,13 @@ xhr.addEventListener("readystatechange", function () {
 
 
        
+    } else{
+        document.getElementById('mycards').innerHTML = `<h1>OOps API is not Happy </h1><br><p class="text-danger"> ${this.responseText} </p>`
     }
   
     
 });
-document.write(myoutput);
+
 
 xhr.open("GET", "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=10&withThumbnails=false&location=us");
 xhr.setRequestHeader("x-rapidapi-host", "contextualwebsearch-websearch-v1.p.rapidapi.com");
